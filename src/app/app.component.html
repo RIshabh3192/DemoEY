@@ -1,3 +1,48 @@
-<h1>
+<h1 style="text-align: center;">
   {{title}}
 </h1>
+
+<h3 style="margin-left: 5%;">
+List Of Potential Users
+</h3>
+
+<div style="margin-left: 5%;">
+
+   <table class="table table-hover" style="text-align: center;">
+                
+                  <tr style="font-size: 9px;color: grey;">
+                    <tr>
+                      <td>Status</td>
+                       <td>Company Info</td>
+                        <td>Key Contacts</td>
+                         <td>Financial Performance</td>
+
+                    </tr>
+                    <tr *ngFor="let target of targetPotentialArray; let index=index" style="text-align: center;cursor: pointer;">
+                      <td>
+                        <div (click)="editTargetPotential(index)">{{target.status}}</div>
+                      </td>  
+                      <td>
+                        <div (click)="editTargetPotential(index)">{{target.companyInfo}}</div>
+                        </td>
+                        <td>
+                        <div (click)="editTargetPotential(index)">{{target.keyContacts}}</div>
+                        </td>
+                        <td>
+                        <div (click)="editTargetPotential(index)">{{target.financialPerformance}}</div>
+                        </td> 
+                        <button (click)="deleteTargetPotential(index)">Delete</button>
+                    </tr>   
+    </table>
+</div>
+
+<div style="margin-top: 5%;margin-left: 5%;">
+ <md-input  placeholder=Status   type="text" [(ngModel)]="demo.status" name="refer"></md-input><br/>
+ <md-input  placeholder="Comapny Info"  [(ngModel)]="demo.companyInfo"  type="text" name="refer"></md-input><br/>
+ <md-input  placeholder="Key Contacts"  [(ngModel)]="demo.keyContacts"  type="text" name="refer"></md-input><br/>
+ <md-input  placeholder="Financial Performance" [(ngModel)]="demo.financialPerformance"   type="text" name="refer"></md-input><br/><br/>
+ <button  md-raised-button color="primary" (click)="postTargetPotential()">Submit</button>
+</div>
+ 
+
+

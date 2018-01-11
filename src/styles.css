@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+
+.tableData tbody tr td md-input{
+  width: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}

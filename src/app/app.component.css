@@ -1,0 +1,14 @@
+.tableData tbody tr td md-input{
+  width: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+tr{
+   background-color:#BDBDBD;
+     border: 1px solid black;
+
+}
